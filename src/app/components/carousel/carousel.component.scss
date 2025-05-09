@@ -1,0 +1,96 @@
+@use 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel' as owlCarousel;
+@use 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default' as owlTheme;
+
+// Estilos personalizados para o carrossel
+
+.carrousel{
+  margin-top: 470px;
+  cursor: pointer;
+
+  h3{
+    font: bold 32px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .owl-carousel {
+ 
+    // Estilos base do carrossel
+    .owl-stage-outer {
+      overflow: hidden;
+      width: 100%;
+      position: relative; // Para que o conteúdo dentro do carrossel não ultrapasse os limites
+    }
+  
+    .owl-stage {
+     
+      display: flex;
+      align-items: center;  // Alinha as imagens verticalmente
+      justify-content: center; // Garante que as imagens sejam centralizadas
+      width: 100%;
+    }
+  
+    .owl-item {
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;  // Impede que o item encolha
+      width: 100%;     // Garante que os itens ocupem toda a largura do carrossel
+    }
+  
+    .owl-item img {
+      width: 400px;
+      height: 400px;     // Faz com que as imagens preencham o slide verticalmente
+      object-fit: cover; // Garante que a imagem cubra o espaço sem distorção
+      display: block;   // Remove espaçamentos indesejados ao redor da imagem
+      border-radius: 10px;
+    }
+  
+    // Estilos para o tema padrão
+    .owl-nav {
+      display: none !important;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+  
+      .owl-prev,
+      .owl-next {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  
+    .owl-dots {
+      text-align: center;
+      margin-top: 10px;
+  
+      .owl-dot {
+        display: inline-block;
+        margin: 0 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+  
+        &.active {
+          background-color: #007bff;
+        }
+      }
+    }
+  }
+}
+
+
+
+

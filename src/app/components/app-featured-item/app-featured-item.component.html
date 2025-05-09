@@ -1,0 +1,9 @@
+<div class="featured-item">
+     <img [src]="imgSrc" [alt]="imgAlt">
+     
+     <div class="buttons">
+       <a [href]="btn1Href">{{ btn1Label }}</a>
+       <a *ngIf="btn2Label && btn2Href" [href]="btn2Href">{{ btn2Label }}</a>
+     </div>
+   </div>
+   

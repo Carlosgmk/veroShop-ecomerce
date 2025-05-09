@@ -1,0 +1,11 @@
+<div class="deal-spot-container">
+  <div class="deal-spot-container__content" *ngFor="let deal of deals">
+    <div class="deal-spot-container__content__img">
+      <img [src]="deal.img" alt="Imagem da Oferta" />
+    </div>
+    <div class="deal-spot-content__benefit">
+      <h4 class="title">{{ deal.title }}</h4>
+      <span class="desc"> {{ deal.desc }} </span>
+    </div>
+  </div>
+</div>

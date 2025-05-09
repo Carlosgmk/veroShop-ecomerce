@@ -1,0 +1,27 @@
+<div class="header-first">
+      <p>{{ topNotifications[currentNotificationIndex] }}</p>
+</div>
+<div class="header-content">
+     <img class="header-content__logo" src="assets/images/veroShop.png" 
+     alt="">
+     <div class="header-content__search-container">
+           <input type="text" placeholder="Buscar">
+           <img class="icon-search" src="https://e7.pngegg.com/pngimages/17/819/png-clipart-computer-icons-magnifying-glass-magnifying-glass-glass-magnifier.png" alt="">
+     </div>
+     <div class="header-content__nav-icons">
+           <img class="configIcon" src="assets/images/user.png" 
+           alt=""
+           (click)="DialogRegisterUser()"
+           >
+           
+           <img class="configIcon" src="https://e7.pngegg.com/pngimages/457/354/png-clipart-plastic-bag-shopping-bags-trolleys-computer-icons-grocery-rectangle-accessories.png" alt="carrinho de compras"
+           (click)="bagUser()"
+           >
+     </div>
+</div>
+
+
+
+<div class="spinner-overlay" *ngIf="isLoading">
+      <mat-spinner diameter="50"></mat-spinner>
+</div>

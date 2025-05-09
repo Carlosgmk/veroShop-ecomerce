@@ -1,0 +1,49 @@
+<form  class="auth-form" #meuForm="ngForm">
+     <mat-form-field class="email-field">
+         <!-- [errorStateMatcher]="matcher" -->
+         <mat-label>Email:</mat-label>
+         <input 
+             type="text"
+             name="email"
+             matInput
+             ngModel
+             #emailControl="ngModel"
+             appEmailValidator
+             autocomplete="current-password"
+             required
+         />
+         <mat-error *ngIf="emailControl.hasError('required')">O Email é <strong>obrigatório</strong>.</mat-error>
+         <mat-error *ngIf="emailControl.hasError('invalidEmail') && !emailControl.hasError('required')">O Email está <strong>fora do padrão</strong>.</mat-error>
+     </mat-form-field>
+ 
+     <mat-form-field class="password-field">
+          <!-- [errorStateMatcher]="matcher" -->
+          <mat-label>Senha:</mat-label>
+          <input 
+              type="password"
+              name="senha"
+              matInput
+              ngModel
+              (ngModelChange)="onPasswordChange($event)"
+              #passwordControl="ngModel"
+              appPasswordValidator
+              required
+          />
+          
+          <mat-error *ngIf="passwordControl.hasError('required')">A Senha é <strong>obrigatória</strong>.</mat-error>
+          <mat-error *ngIf="passwordControl.hasError('invalidPasswordStrength') && !passwordControl.hasError('required')">Senha <strong>fora do padrão</strong>.</mat-error>
+          
+          <!-- <mat-progress-bar [value]="passwordStrengthValue" [ngClass]="{
+            'weak-password': passwordStrengthValue === 0 || passwordStrengthValue === 30,
+            'medium-password': passwordStrengthValue === 60,
+            'strong-password': passwordStrengthValue === 100
+       }"></mat-progress-bar> -->
+      </mat-form-field> 
+      <div class="forgot-password">
+          <span><a href="">Esqueceu sua senha?</a></span>
+      </div>
+
+     <div class="btn-submit">
+         <button type="submit">Entrar</button>
+     </div>
+ </form>

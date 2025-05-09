@@ -1,0 +1,26 @@
+.deal-spot-container{
+     
+     display: flex;
+     justify-content: space-between;
+     // border: 1px solid red;
+     margin: 50px 0px;
+
+     &__content{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // background-color: red;
+
+          &__img{
+                  margin-right: 20px;
+               //    border: 1px solid red;
+
+             }
+     }
+
+     .desc{
+          color: rgb(113, 121, 121);
+          font-size: 13px;
+     }
+   
+}

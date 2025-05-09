@@ -1,0 +1,12 @@
+<div class="carrousel">
+  <h3>Você está interessado?</h3>
+  <owl-carousel-o [options]="carouselOptions">
+    <ng-container *ngFor="let slide of slides; let i = index; trackBy: trackById">
+      <ng-template carouselSlide>
+        <img rel="preload" [src]="slide.url" alt="Slide" class="slide-image" />
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>
+
+

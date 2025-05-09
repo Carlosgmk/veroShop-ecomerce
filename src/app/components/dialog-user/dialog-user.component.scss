@@ -1,0 +1,193 @@
+::ng-deep .cdk-overlay-container {
+  z-index: 920000 !important;
+}
+
+::ng-deep .cdk-overlay-backdrop {
+  z-index: 9920001 !important;
+}
+
+::ng-deep .cdk-global-overlay-wrapper {
+  z-index: 99920002 !important;
+}
+
+::ng-deep .mat-mdc-dialog-container {
+  z-index: 999920003 !important;
+}
+
+
+::ng-deep .mdc-dialog__surface {
+     position: relative;
+     border-radius: 0 !important;
+     overflow: hidden;
+     width: 90%;
+     max-width: 400px;
+     padding: 2rem;
+     height: auto; 
+
+     &::before {
+      border-radius: 0 !important;
+      
+    }
+   }
+
+   .exit{
+    width: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, 50%);
+    width: 12px;
+    
+  }
+   
+  .main-content{
+    .login-header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+
+      h3 {
+        margin: 0px 0px 3px 0px;
+        text-align: center;
+        font-size: 25px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+      }
+
+      span{
+         color: rgb(87, 79, 79);
+         font-size: 12px;
+         
+         text-align: center !important;
+      }
+   }
+    .social-login{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0px;
+
+      .google-login-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 7px;
+        cursor: pointer;
+
+
+        .google-logo{
+          width: 20px;
+          
+          margin-right: 10px;
+          
+          
+        }
+      }
+      
+      span{
+        font-weight: bold;
+      }
+    }
+
+    .separator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    
+      &::before,
+      &::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background-color: #ccc;
+      }
+    
+      span {
+        padding: 0 10px;
+        color: #555;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+    }
+
+    .modal-footer{
+      
+      
+      a {
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+    
+        &:hover {
+          text-decoration: underline;
+          color: #0056b3;
+        }
+      }
+    }
+  }
+
+   
+   
+
+   .complementText{
+    margin-top: 10px;
+    font-size: 13px;
+   }
+
+   h5{
+    margin-top: 15px;
+   }
+
+   .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // Espaçamento entre os campos
+    max-width: 400px; // Largura máxima
+    width: 100%; // Responsivo
+    margin: 0 auto; // Centraliza na tela
+    padding: 2rem;
+    background-color: #fff; // Fundo branco
+    border-radius: 10px; // Bordas arredondadas
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Sombra suave
+    
+    input {
+      padding: 10px;
+      border: 2px solid #ddd; // Borda suave
+      border-radius: 5px; // Bordas arredondadas
+      font-size: 1rem;
+      transition: all 0.3s ease; // Efeito suave no foco
+      
+      &:focus {
+        border-color: #007BFF; // Borda azul ao focar
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); // Efeito de sombra no foco
+        outline: none; // Remove a borda padrão
+      }
+    }
+  
+    button {
+      padding: 12px 20px; // Botão com padding confortável
+      border: none;
+      background-color: #007BFF; // Cor de fundo
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px; // Bordas arredondadas
+      cursor: pointer;
+      transition: background-color 0.3s ease; // Efeito de hover
+  
+      &:hover {
+        background-color: #0056b3; // Escurece a cor do botão ao passar o mouse
+      }
+  
+      &:active {
+        background-color: #004085; // Cor mais escura ao clicar
+      }
+    }
+  }
+  

@@ -1,0 +1,34 @@
+<img class="exit" src="assets/images/x-button.png" alt="" (click)="exitModal()">
+
+<main class="main-content" role="dialog" aria-labelledby="login-title" aria-describedby="login-description">
+     <header class="login-header">
+          <h3>Acesse sua conta</h3>
+          <span>É necessário acessar sua conta para continuar.</span>
+     </header>
+     
+     <section class="social-login" aria-label="Login com redes sociais">
+          <button class="google-login-btn" type="button">
+               <img class="google-logo" src="assets/images/icone-google.png" alt="logo do google">
+               <span>Continuar com o Google</span>
+          </button>
+     </section>
+
+     <div class="separator">
+          <span>ou</span>
+     </div>
+
+     <app-auth/>
+
+     <footer class="modal-footer" aria-label="Rodapé do modal de login">
+          <h5>Fazer Login ou <a href="">criar conta</a> (é gratuito).</h5>
+          <p class="complementText">Ganhe frete grátis, cupons de desconto e produtos exclusivos.</p>
+     </footer>
+  
+</main>
+
+
+
+
+
+
+

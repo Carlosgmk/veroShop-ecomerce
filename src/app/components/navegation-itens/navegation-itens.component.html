@@ -1,0 +1,11 @@
+<div class="app-navegation-itens__container" 
+[class.light-theme]="isLightTheme" 
+[class.display-direction]="isDisplayDirection"
+[class.with-margin]="isWithMargin"
+>
+     <!-- Só renderiza o título se listTitle existir -->
+     <h5 *ngIf="listTitle">{{ listTitle }}</h5>
+     <li *ngFor="let item of listItems"><a href="">{{ item }}</a></li>
+     
+</div>
+   

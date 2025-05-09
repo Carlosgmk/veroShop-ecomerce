@@ -1,0 +1,13 @@
+<div class="you-may-like">
+     <h3>Conheça Também</h3>
+     <div class="you-may-like__card-container">
+      <div class="you-may-like__content" *ngFor="let img of mayLikeimg">
+        <div class="you-may-like__card">
+          <img class="normal" [src]="img.primaryImg" alt="Produto" />
+          <img class="hover" [src]="img.hoverImg" alt="Produto hover" />
+          <p>3 itens</p>
+        </div>
+      </div>
+     </div>
+   </div>
+   

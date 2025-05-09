@@ -1,0 +1,22 @@
+
+<div class="video-container">
+     <video 
+       #videoPlayer 
+       [src]="src" 
+       autoplay 
+       loop 
+       playsinline 
+       [attr.controls]="disableControls ? '' : null"
+       class="video-container__video">
+     </video>
+   
+     <!-- Se houver imagem e texto, renderiza a sobreposição -->
+     <div *ngIf="overlayImage || title || description" class="content-overlay">
+       <img *ngIf="overlayImage" [src]="overlayImage" alt="Overlay Image" class="content-overlay__image">
+       <div class="content-overlay__text-content">
+         <h2 *ngIf="title">{{ title }}</h2>
+         <span *ngIf="description">{{ description }}</span>
+       </div>
+     </div>
+   </div>
+   

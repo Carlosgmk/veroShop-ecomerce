@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  width: 320px; 
+  max-width: 90vw; // opcional para responsividade
+  padding: 20px;
+  height: 165px;
+}
+
+
+.confirmacao-email{
+     display: flex;
+     flex-direction: column;
+
+     h2{
+          font-size: 1.1rem;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-weight: bolder;
+          text-align: center;
+          margin-bottom: 40px;
+     }
+
+     &__actions{
+          margin-top: 30px;
+          display: flex;
+          justify-content: space-around;
+     }
+
+}

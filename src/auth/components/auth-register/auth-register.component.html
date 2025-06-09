@@ -1,0 +1,106 @@
+<form #meuForm="ngForm" (submit)="enviarRegistro(meuForm)" novalidate>
+<app-back-button></app-back-button>
+
+  <fieldset>
+    <legend>Cadastro de Usuário</legend>
+
+    <mat-form-field>
+      <mat-label>Nome </mat-label>
+      <input
+        matInput
+        type="text"
+        id="name"
+        name="name"
+        matInput
+        ngModel
+        #NameControl="ngModel"
+        required
+        aria-required="true"
+      />
+      <mat-error *ngIf="NameControl.hasError('required')">O Nome é <strong>obrigatório</strong>.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email </mat-label>
+      <input
+        matInput
+        type="email"
+        id="email"
+        name="email"
+        matInput
+        ngModel
+        #emailControl="ngModel"
+        appEmailValidator  
+        required
+        aria-required="true"
+      />
+         <mat-error *ngIf="emailControl.hasError('required')">O Email é <strong>obrigatório</strong>.</mat-error>
+         <mat-error *ngIf="emailControl.hasError('invalidEmail') && !emailControl.hasError('required')">O Email está <strong>fora do padrão</strong>.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Telefone </mat-label>
+      <input
+        matInput
+        type="tel"
+        id="telefone"
+        name="tel"
+        maxlength="11"
+        matInput
+        ngModel
+        #TelControl="ngModel"
+        appTelValidator
+        required
+        aria-required="true"
+      />
+      <small
+        >Formato esperado: DDD, número ex: 11995432104
+        </small
+      >
+      <mat-error *ngIf="TelControl.hasError('required') ">O Telefone é <strong>obrigatório</strong>.</mat-error>
+      <mat-error *ngIf="TelControl.hasError('invalidTel') && !TelControl.hasError('required') ">Telefone inválido. Use o formato 11993316803</mat-error>
+    </mat-form-field>
+
+    
+
+     <span class="title-confirmation-account">Como deseja confirmar sua conta?</span>
+<mat-radio-group
+  [(ngModel)]="verificacao"
+  name="verificacao"
+  required
+  class="radio-group-verification"
+>
+  <mat-radio-button value="email">Confirmar por E-mail</mat-radio-button>
+  <mat-radio-button value="tel">Confirmar por Telefone (SMS)</mat-radio-button>
+</mat-radio-group>
+
+
+    <mat-form-field>
+      <mat-label>Senha *</mat-label>
+      <input
+        matInput
+        type="password"
+        id="password"
+        name="password"
+        matInput
+        ngModel
+        #passwordControl="ngModel"
+        required
+        appPasswordValidator 
+        aria-required="true"
+        minlength="6"
+      />
+          <mat-error *ngIf="passwordControl.hasError('required')">A Senha é <strong>obrigatória</strong>.</mat-error>
+          <mat-error *ngIf="passwordControl.hasError('invalidPasswordStrength') && !passwordControl.hasError('required')">Senha <strong>fora do padrão</strong>.</mat-error>
+    </mat-form-field>
+
+
+
+    <button class="register" type="submit">Cadastrar</button>
+  </fieldset>
+</form>
+
+
+
+
+<div id="recaptcha-container"></div>

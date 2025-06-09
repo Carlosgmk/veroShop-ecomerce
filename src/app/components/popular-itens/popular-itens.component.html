@@ -1,0 +1,11 @@
+<section class="popular-items">
+  <h2 class="section-title">Itens Populares</h2>
+
+  <div class="items-grid">
+    <div class="item-card" *ngFor="let item of popularItems">
+      <img [src]="item.imageUrl" [alt]="item.name" />
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.description }}</p>
+    </div>
+  </div>
+</section>

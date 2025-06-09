@@ -1,10 +1,8 @@
 .footer-content {
   overflow-x: hidden;
-  
+ 
   &__container {
-    margin-top: 450px;
-//     border: 1px solid rgb(9, 255, 0);
-    background-color: rgb(255, 255, 255);
+    margin-top: 470px;
     height: 450px;
     color: #000000;
     display: flex;
@@ -12,38 +10,87 @@
     overflow: hidden;
     overflow-x: hidden;
 
-    &__social-icons{
+
+    &__social-icons {
       // border: 1px solid red;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      h5{
-         margin: 10px 0px;
-         
-         
+      h5 {
+        margin: 10px 0px;
       }
 
-      img{
+      img {
         width: 20px;
         margin-bottom: 10px;
       }
     }
-  
-
   }
 
+  &__mobile {
+    display: none !important;
+    position: relative;
+    margin-top: 310px;
+    background-color: #ffffff;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 175px 120px; /* duas colunas iguais */
+    grid-template-rows: auto auto; /* duas linhas automáticas */
+    
+    
+    .list-content {
+      h5 {
+        margin: 30px 0;
+        cursor: pointer;
+        font-size: 12px;
+        color: #000000;
+      }
+      li {
+        text-decoration: none;
+        list-style: none;
+      }
+    }
+
+    .collum-social-icons {
+      position: absolute;
+      right: 2%;   /* empurra pra fora da tela */
+      top: 15%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70px;
+
+
+      h5 {
+        margin: 10px 0px;
+        font-size: 12px;
+        color: #000000;
+      }
+
+      img {
+        width: 20px;
+        margin-bottom: 10px;
+      }
+    }
+  }
 
   &__company-details {
-    background-color: #282c31;
+    background-color: #000000;
     width: 100%;
     height: 160px;
     overflow: hidden;
 
     &__company-list {
-      margin: 30px 0px;
-     
-      
+      margin: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+
+      li {
+        color: #ffffff;
+      }
     }
   }
 
@@ -55,13 +102,140 @@
     &__company-text {
       width: 1070px;
       white-space: normal;
-      word-wrap: break-word; 
+      word-wrap: break-word;
       overflow-wrap: break-word;
       text-align: center;
       font: 12px "Helvetica", sans-serif;
       color: #ffffff;
       margin: 10px 0px;
-     
     }
   }
 }
+
+@media (max-width: 1070px) {
+  .footer-content__company-details {
+    &__company-list {
+      li {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer-content {
+    &__container {
+      margin-top: 400px;
+      height: 500px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-content {
+    &__company-details {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .footer-content {
+    overflow-x: hidden;
+
+    &__company-details {
+      height: 250px;
+    }
+
+    &__container {
+      background-color: rgb(255, 255, 255);
+      height: 430px;
+      color: #000000;
+      display: flex;
+      justify-content: space-around;
+      overflow: hidden;
+      overflow-x: hidden;
+
+      &__social-icons {
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h5 {
+          font-size: 10px;
+          display: inline-block;
+        }
+
+        img {
+          width: 20px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .footer-content__company-details {
+    &__company-list {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        font-size: 0.6rem;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .footer-content__company-info {
+    &__company-text {
+      font-size: 0.6rem;
+      margin: 0px 10px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-content{
+    &__container{
+    display: none;
+   }
+
+    &__mobile {
+      display: grid !important;
+      height: 230px;
+      grid-template-columns: 140px 120px; /* duas colunas iguais */
+      grid-template-rows: auto auto; /* duas linhas automáticas */
+      
+      .collum-social-icons{
+         h5 {
+       
+        cursor: pointer;
+        font-size: 8px !important;
+       
+        
+      }
+      }
+
+       .list-content {
+
+      h5 {
+        margin: 30px 0;
+        cursor: pointer;
+        font-size: 8px !important;
+        color: #0f0c0c;
+        
+      }
+      .rede-X{
+        width: 15px !important;
+        margin-left: 3px;
+      }
+    }
+    }
+  }
+  
+
+  
+}
+
+  

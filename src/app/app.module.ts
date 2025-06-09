@@ -19,6 +19,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { DialogUserComponent } from './components/dialog-user/dialog-user.component';
 import { NavegationItensComponent } from './components/navegation-itens/navegation-itens.component';
 import { AuthModule } from '../auth/auth.module';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { HomePageComponent } from './home/home-page/home-page.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MainVisualComponent } from './components/main-visual/main-visual.component';
+import { PopularItensComponent } from './components/popular-itens/popular-itens.component';
+import { ProductVideoComponent } from './components/product-video/product-video.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +40,14 @@ import { AuthModule } from '../auth/auth.module';
     DealSpotComponent,
     FooterComponent,
     DialogUserComponent,
-    NavegationItensComponent
+    NavegationItensComponent,
+    HomeLayoutComponent,
+    AuthLayoutComponent,
+    HomePageComponent,
+    MainVisualComponent,
+    PopularItensComponent,
+    ProductVideoComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -42,9 +57,15 @@ import { AuthModule } from '../auth/auth.module';
     MatDialogModule,
     MatProgressSpinnerModule,
     MatButtonModule,
-    AuthModule
+    AuthModule,
+    CarouselModule,
+    MatIconModule
+    
+    
   ],
-  providers: [],
+  providers: [
+     provideHttpClient(withInterceptorsFromDi()) 
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

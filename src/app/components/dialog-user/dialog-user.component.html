@@ -7,7 +7,7 @@
      </header>
      
      <section class="social-login" aria-label="Login com redes sociais">
-          <button class="google-login-btn" type="button">
+          <button class="google-login-btn" type="button" (click)="loginWithGoogle()">
                <img class="google-logo" src="assets/images/icone-google.png" alt="logo do google">
                <span>Continuar com o Google</span>
           </button>
@@ -17,10 +17,10 @@
           <span>ou</span>
      </div>
 
-     <app-auth/>
+     <app-auth (loginSucesso)="exitModal()"/>
 
      <footer class="modal-footer" aria-label="Rodapé do modal de login">
-          <h5>Fazer Login ou <a href="">criar conta</a> (é gratuito).</h5>
+          <h5>Fazer Login ou <a (click)="registerAccount()">criar conta</a> (é gratuito).</h5>
           <p class="complementText">Ganhe frete grátis, cupons de desconto e produtos exclusivos.</p>
      </footer>
   

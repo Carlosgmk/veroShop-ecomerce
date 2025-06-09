@@ -1,11 +1,17 @@
-<div class="deal-spot-container">
-  <div class="deal-spot-container__content" *ngFor="let deal of deals">
-    <div class="deal-spot-container__content__img">
-      <img [src]="deal.img" alt="Imagem da Oferta" />
-    </div>
-    <div class="deal-spot-content__benefit">
-      <h4 class="title">{{ deal.title }}</h4>
-      <span class="desc"> {{ deal.desc }} </span>
-    </div>
-  </div>
-</div>
+<owl-carousel-o [options]="carouselOptions">
+  <ng-container *ngFor="let deal of deals">
+    <ng-template carouselSlide>
+      <div class="deal-spot-container">
+        <div class="deal-spot-container__content">
+          <div class="deal-spot-container__content__img">
+            <img [src]="deal.img" alt="Imagem da Oferta" />
+          </div>
+          <div class="deal-spot-content__benefit">
+            <h4 class="title">{{ deal.title }}</h4>
+            <span class="desc">{{ deal.desc }}</span>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>

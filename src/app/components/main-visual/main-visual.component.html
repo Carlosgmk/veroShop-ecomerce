@@ -1,0 +1,19 @@
+<section class="main-visual-content">
+  <owl-carousel-o [options]="carouselOptions">
+    <ng-container *ngFor="let slide of slides; let i = index; trackBy: trackById">
+      <ng-template carouselSlide>
+        <div class="slide-wrapper">
+        <img class="slide-image" rel="preload" [src]="slide.url" alt="Slide"  />
+
+        <!-- Conteúdo dinâmico no hover -->
+        <div class="overlay-content">
+            <h2 class="overlay-title">{{ slide.text }}</h2>
+            <a class="overlay-button" [routerLink]="slide.link">SHOP</a>
+        </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</section>
+
+

@@ -1,0 +1,14 @@
+<div class="content-verify-code">
+  <h2>Digite o código de verificação</h2>
+  <mat-form-field appearance="outline" class="w-full">
+    <mat-label>Código</mat-label>
+    <input matInput [(ngModel)]="codigo" maxlength="6" />
+  </mat-form-field>
+
+  <div class="content-verify-code__actions">
+    <button mat-button (click)="cancel()">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="confirmarCodigo()">
+      Confirmar
+    </button>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div *ngIf="mostrarConfirmacaoEmail" class="confirmacao-email">
+  <h2>Você já confirmou o seu e-mail?</h2>
+  <div class="confirmacao-email__actions">
+      <button mat-raised-button color="primary" (click)="verificarEmailConfirmado()">Sim</button>
+      <button mat-button color="warn" (click)="cancelarVerificacaoEmail()">Não</button>
+  </div>
+  
+</div>

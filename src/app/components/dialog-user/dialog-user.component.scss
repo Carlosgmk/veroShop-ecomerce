@@ -75,7 +75,8 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding: 7px;
+        
+        height: 35px;
         cursor: pointer;
 
 
@@ -123,6 +124,7 @@
         color: #007bff;
         text-decoration: none;
         font-family: 'Poppins', sans-serif;
+        cursor: pointer;
     
         &:hover {
           text-decoration: underline;

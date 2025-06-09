@@ -14,4 +14,26 @@ export class DealSpotComponent {
     {img: 'https://quiksilver.vtexassets.com/assets/vtex/assets-builder/quiksilver.store-theme/4.0.18/imgs/home/benefits/benefit-shipping___21c5c366c20c1d7e9042ebbf21df59d2.svg', title: 'Ganhe Entrega Grátis', desc: 'Frete grátis acima de R$ 199,90'},
    
   ]
+
+    carouselOptions = {
+    items: 1, // Quantos itens por vez
+    loop: false, // Habilita o loop
+    margin: 20, // Espaçamento entre os itens
+    nav: false, // Habilita a navegação
+    autoplay: false, // Habilita o autoplay
+    autoplayTimeout: 3000, // Intervalo do autoplay
+    dots: false,
+    navText: [
+      '<img src="assets/images/seta-esquerda.png" alt="Anterior">',
+      '<img src="assets/images/seta-direita.png" alt="Anterior">'
+    ],
+    autoplayHoverPause: true, // Pausa o autoplay quando passa o mouse
+      responsive: {
+    0: { items: 1 },
+    600: { items: 2 },
+    // 600: { items: 3 },
+    1000: { items: 3 },
+    1300: { items: 4 } // você pode ajustar isso também
+  }
+  };
 }

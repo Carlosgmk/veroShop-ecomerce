@@ -26,6 +26,7 @@
           "options": {
             "outputPath": "dist/e-comerce",
             "index": "src/index.html",
+            "baseHref": "/veroShop-ecomerce/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -47,8 +48,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",

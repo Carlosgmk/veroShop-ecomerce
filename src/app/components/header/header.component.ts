@@ -10,6 +10,7 @@ import { DialogUserComponent } from '../dialog-user/dialog-user.component';
 })
 export class HeaderComponent implements OnInit {
   isLoading: boolean = false;
+  
   topNotifications: string[] = [
     'ENVIO IMEDIATO',
     'COMPRE AGORA COM  FRETE GRÁTIS',
@@ -19,7 +20,6 @@ export class HeaderComponent implements OnInit {
   constructor(private dialog: MatDialog) {}
 
   DialogRegisterUser() {
-    console.log('clicado')
     this.isLoading = true;
 
     setTimeout(() => {

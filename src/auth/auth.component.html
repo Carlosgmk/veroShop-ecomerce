@@ -1,15 +1,15 @@
-<form  class="auth-form" #meuForm="ngForm">
+<form  class="auth-form" #meuForm="ngForm" (ngSubmit)="enviarLogin(meuForm)">
      <mat-form-field class="email-field">
          <!-- [errorStateMatcher]="matcher" -->
          <mat-label>Email:</mat-label>
          <input 
-             type="text"
+             type="email"
              name="email"
              matInput
              ngModel
              #emailControl="ngModel"
+             autocomplete="email"
              appEmailValidator
-             autocomplete="current-password"
              required
          />
          <mat-error *ngIf="emailControl.hasError('required')">O Email é <strong>obrigatório</strong>.</mat-error>
@@ -22,6 +22,7 @@
           <input 
               type="password"
               name="senha"
+              autocomplete="password"
               matInput
               ngModel
               (ngModelChange)="onPasswordChange($event)"
@@ -40,10 +41,10 @@
        }"></mat-progress-bar> -->
       </mat-form-field> 
       <div class="forgot-password">
-          <span><a href="">Esqueceu sua senha?</a></span>
+          <span><a (click)="recoverPassword()">Esqueceu sua senha?</a></span>
       </div>
 
      <div class="btn-submit">
-         <button type="submit">Entrar</button>
+         <button type="submit" [disabled]="meuForm.invalid">Entrar</button>
      </div>
  </form>

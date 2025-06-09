@@ -3,16 +3,21 @@
      flex-direction: column;
      align-items: center;
      text-align: center;
+     margin-top: 60px;
+     margin-bottom: 30px;
    
      img {
-      width: 1280px;
+      width: 100%;
       //  max-width: 400px;
        height: 150px;
        border-radius: 10px;
+      // object-fit: cover;
+      
      }
    
      .buttons {
        margin: 20px 0px ;
+       cursor: pointer;
        
        a {
          display: inline-block;
@@ -31,3 +36,114 @@
      }
    }
    
+@media (max-width: 930px){
+             .featured-item {
+     img{
+      //  border: 1px solid red;
+       width: 970px;
+       height: 95px;
+     }
+
+      .buttons {
+       margin: 20px 0px ;
+       cursor: pointer;
+       
+       a {
+         display: inline-block;
+         margin: 10px;
+         padding: 10px 15px;
+         text-decoration: none;
+         color: rgb(235, 226, 226);
+         background-color: #030303;
+         border-radius: 10px;
+         transition: 0.3s;
+   
+         &:hover {
+           background-color: #4B4B4B;
+         }
+       }
+     }
+   }
+}
+
+@media (max-width: 650px){
+  .buttons {
+       margin: 20px 0px ;
+       cursor: pointer;
+       
+       a {
+        width: 140px;
+       }
+     }
+}
+
+@media (max-width: 500px){
+           .featured-item {
+     img{
+      //  border: 1px solid red;
+       width: 950px;
+       height: 95px;
+     }
+
+       .buttons {
+       margin: 20px 0px ;
+       cursor: pointer;
+       
+       a {
+        width: 115px;
+        font-size: 13px;
+        
+       }
+     }
+   }
+}
+  
+
+
+@media (max-width: 481px){
+   .featured-item {
+     img{
+      //  border: 1px solid red;
+       width: 800px;
+       height: 85px;
+     }
+   }
+}
+
+ @media (max-width: 414px) {
+       .featured-item {
+     img{
+      //  border: 1px solid red;
+       width: 750px;
+       height: 85px;
+     }
+   }
+ }
+
+
+
+
+  @media (max-width: 380px) {
+   .featured-item {
+     img{
+      //  border: 1px solid red;
+       width: 640px;
+       height: 85px;
+     }
+
+            .buttons {
+       margin: 20px 0px ;
+       cursor: pointer;
+       display: flex;
+       flex-direction: column;
+
+       a {
+        width: 110px;
+        font-size: 12px;
+        // font-weight: bold;
+        
+       }
+     }
+   }
+
+ }
